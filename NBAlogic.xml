@@ -1,0 +1,141 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+<!-- Greetings and Politeness -->
+<category> <pattern> HELLO </pattern>
+  <template>Hello! How are you?</template> </category>
+
+<category> <pattern> HELLO * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HOW ARE YOU </pattern>
+  <template>I'm functioning within normal parameters, thanks for asking.</template></category>
+
+<category><pattern> I AM FINE </pattern>
+  <template>That's good to know. What would you like to discuss about?</template></category>
+
+<category><pattern> BYE </pattern>
+  <template>#0$Bye! Nice talking to you. You take care now.</template></category>
+
+<category><pattern> GOODBYE </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category><pattern> EXIT </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category> <pattern> THANKS </pattern>
+  <template>You are welcome.</template></category>
+
+<category> <pattern> THANK YOU </pattern>
+  <template><srai>THANKS</srai></template></category>
+
+<category> <pattern> CHEERS </pattern>
+  <template>Sure mate.</template></category>
+
+<category> <pattern> CHEERS * </pattern>
+  <template>Sure mate.</template></category>
+
+<!-- Logic input -->
+<category><pattern> I KNOW THAT * IS *</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>  
+
+<category><pattern> CHECK THAT * IS *</pattern>
+  <template>#32$<star index="1"/> is <star index="2"/></template></category>
+  
+<category><pattern> WHO DOES * PLAY FOR</pattern>
+    <template>#32$<star index="1"/> PLAY FOR <star index="2"/></template></category>
+
+<!-- Weather API -->
+<category><pattern> WHAT IS THE WEATHER LIKE IN * </pattern>
+	<template>#2$<star/></template></category>
+
+<category><pattern> HOW IS THE WEATHER IN * </pattern>
+	<template><srai>WHAT IS THE WEATHER LIKE IN <star/></srai></template></category>
+
+<!--- Wikipedia API -->
+<category><pattern> WHAT IS A * </pattern>
+	<template>#1$<star index="1"/></template></category>
+
+<category><pattern> WHAT IS AN * </pattern>
+	<template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> WHAT IS * </pattern>
+	<template><srai>WHAT IS A <star/></srai></template></category>
+	
+<category><pattern> WHAT IS THE * </pattern>
+	<template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> DEFINE * </pattern>
+    <template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> WHO IS * </pattern>
+	<template><srai>WHAT IS A <star/></srai></template></category>
+	
+<category><pattern> SHOW AN IMAGE OF * </pattern>
+	<template>#35$<star index="1"/></template></category>
+	
+<category><pattern> SHOW ME AN IMAGE OF * </pattern>
+	<template><srai>SHOW AN IMAGE OF <star/></srai></template></category>
+
+<!--ChatBot topic reactions-->
+<category><pattern> I KNOW THAT * </pattern>
+	<template><srai>OK, I'LL REMEMBER THAT <star/></srai></template></category>
+	
+<category><pattern> I KNOW THAT * IS A </pattern>
+	<template><srai> I KNOW THAT * <star/></srai></template></category>
+
+<category><pattern> CHECK THAT * </pattern>
+    <template><srai>CORRECT <star/></srai></template></category>
+    
+<category><pattern> CHECK THAT * IS A</pattern>
+    <template><srai> CHECK THAT * <star/></srai></template></category>
+    
+<category><pattern> CHECK THAT * ARE A</pattern>
+    <template><srai> CHECK THAT * <star/></srai></template></category>
+    
+<category><pattern>WHO IS THE BEST PLAYER IN THE NBA</pattern>
+    <template>In my opinion, the best player in the NBA is LeBron James</template></category>
+    
+<category><pattern>WHAT TEAM HAS THE MOST CHAMPIONSHIPS</pattern>
+    <template>The team with the most championships in the NBA is the Boston Celtics, with a total of 17</template></category>
+
+<category><pattern>WHAT IS THE NBA DRAFT LOTTERY</pattern>
+    <template>The NBA Draft Lottery is an annual event in which the teams who did not make the playoffs in the previous season have a chance to obtain a higher pick in the upcoming NBA draft. The lottery is conducted using a weighted system, with the teams who finished with the worst records having a higher chance of getting a higher pick.</template></category>
+
+#<category><pattern>WHO IS THE CURRENT NBA MVP</pattern>
+    <template>Nikola Jokic</template></category>
+
+<category><pattern>WHAT ARE SOME OF THE MOST ICONIC NBA GAMES</pattern>
+    <template>Some of the most iconic NBA games include the 1970 NBA Finals Game 7 between the New York Knicks and the Los Angeles Lakers, the 1980 NBA Finals Game 6 between the Philadelphia 76ers and the Los Angeles Lakers, and the 2016 NBA Finals Game 7 between the Cleveland Cavaliers and the Golden State Warriors.</template></category>
+
+<category><pattern>WHAT ARE SOME OF THE MOST FAMOUS NBA TEAMS</pattern>
+    <template>Some of the most famous NBA teams include the Boston Celtics, the Los Angeles Lakers, the Chicago Bulls, and the Golden State Warriors.</template></category>
+
+<category><pattern>WHAT IS THE NBA ALL-STAR GAME</pattern>
+    <template>The NBA All-Star Game is an annual exhibition game in which the best players from the Eastern Conference and the Western Conference compete against each other. The players are selected by a combination of fan, player, and media voting.</template></category>
+
+<category><pattern>WHAT IS THE NBA G-LEAGUE</pattern>
+    <template>The NBA G League, formerly known as the NBA Development League, is the official minor league basketball organization of the NBA. The league is used as a training ground for players, coaches, and referees, and many players have gone on to have successful careers in the NBA after playing in the G League.</template></category>
+    
+<category><pattern>HOW MANY TEAMS IN THE NBA</pattern>
+    <template>There are currently 30 teams in the NBA</template></category>
+
+<category><pattern>WHAT IS THE NBA TRADE DEADLINE</pattern>
+    <template>The NBA trade deadline is the date by which all trades must be completed in a given season. The deadline is usually in February, and is an important time for teams to make roster changes in preparation for the playoffs.</template></category>    
+    
+<category><pattern> WHAT DO YOU KNOW </pattern>
+  <template>#33$<star index="1"/> is <star index="2"/></template></category>
+  
+<category><pattern> WHAT IS THIS IMAGE </pattern>
+  <template>#34$<star index="1"/> is <star index="2"/></template></category>
+
+<!-- Default reaction -->
+<category><pattern> * </pattern>
+  <template>#99$<star index="1"/></template></category>
+
+</aiml>
